@@ -50,14 +50,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="dMt-2u-b6u">
                         <leftBarButtonItems>
-                            <barButtonItem systemItem="play" id="hai-HJ-IPg">
+                            <barButtonItem title="Построить маршрут" id="hai-HJ-IPg">
                                 <connections>
                                     <action selector="goToMarkerAction:" destination="L1O-0q-j8q" id="tHm-XW-cdp"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="trash" id="5wp-9q-Jzl"/>
+                            <barButtonItem enabled="NO" systemItem="trash" id="5wp-9q-Jzl">
+                                <connections>
+                                    <action selector="removeOverlaysAction:" destination="L1O-0q-j8q" id="Rai-R9-hdK"/>
+                                </connections>
+                            </barButtonItem>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="bfX-r2-jow">
+                        <barButtonItem key="rightBarButtonItem" title="Список" id="bfX-r2-jow">
                             <connections>
                                 <segue destination="qzw-gP-PTw" kind="show" identifier="Search" id="2X1-Cn-1Bg"/>
                             </connections>
@@ -65,6 +69,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="ZZl-SB-CsS" id="vwy-7E-1zD"/>
+                        <outlet property="trashBarButtonItem" destination="5wp-9q-Jzl" id="aVB-2f-v4H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qed-4F-D69" userLabel="First Responder" sceneMemberID="firstResponder"/>

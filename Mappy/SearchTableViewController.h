@@ -14,7 +14,7 @@
 @interface SearchTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray* markers;
-
+@property (strong, nonatomic) Marker* destinationMarker;
 @property (strong, nonatomic) id<SearchDelegate> delegate;
 
 @end

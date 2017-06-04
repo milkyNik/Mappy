@@ -18,8 +18,10 @@
 @property (strong, nonatomic) Marker* destinationMarker;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *trashBarButtonItem;
 
 - (IBAction)goToMarkerAction:(UIBarButtonItem *)sender;
+- (IBAction)removeOverlaysAction:(UIBarButtonItem *)sender;
 
 @end
 

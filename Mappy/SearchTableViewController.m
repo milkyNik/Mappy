@@ -12,7 +12,6 @@
 
 @interface SearchTableViewController ()
 
-@property (strong, nonatomic) Marker* destinationMarker;
 
 @end
 
