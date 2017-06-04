@@ -117,7 +117,7 @@
 - (IBAction)removeOverlaysAction:(UIBarButtonItem *)sender {
     
     self.trashBarButtonItem.enabled = NO;
-    
+    self.destinationMarker = nil;
     [self.mapView removeOverlays:[self.mapView overlays]];
     
 }
@@ -166,7 +166,6 @@
 - (void)mapViewDidFinishRenderingMap:(MKMapView *)mapView fullyRendered:(BOOL)fullyRendered {
     
     [self.mapView addAnnotations:self.markers];
-    [self showDirectionWithAnnotation:self.markers];
     
 }
 
