@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class MKMapView;
+@class Marker;
 
+@interface ViewController : UIViewController 
+
+@property (strong, nonatomic) NSArray* markers;
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+- (IBAction)goToMarkerAction:(UIBarButtonItem *)sender;
 
 @end
 

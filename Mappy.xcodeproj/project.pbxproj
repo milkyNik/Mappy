@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880EA1A31EE410290009155D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880EA1A21EE410290009155D /* MapKit.framework */; };
+		880EA1A71EE41B630009155D /* Marker.m in Sources */ = {isa = PBXBuildFile; fileRef = 880EA1A61EE41B630009155D /* Marker.m */; };
+		880EA1AB1EE43E160009155D /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 880EA1AA1EE43E160009155D /* SearchTableViewController.m */; };
 		88B47D451EE355A5005114C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B47D441EE355A5005114C1 /* main.m */; };
 		88B47D481EE355A5005114C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B47D471EE355A5005114C1 /* AppDelegate.m */; };
 		88B47D4B1EE355A5005114C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B47D4A1EE355A5005114C1 /* ViewController.m */; };
@@ -16,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880EA1A21EE410290009155D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		880EA1A51EE41B630009155D /* Marker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marker.h; sourceTree = "<group>"; };
+		880EA1A61EE41B630009155D /* Marker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Marker.m; sourceTree = "<group>"; };
+		880EA1A91EE43E160009155D /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		880EA1AA1EE43E160009155D /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		88B47D401EE355A5005114C1 /* Mappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B47D441EE355A5005114C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88B47D461EE355A5005114C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +41,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880EA1A31EE410290009155D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		880EA1A11EE410290009155D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				880EA1A21EE410290009155D /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		880EA1A41EE41A700009155D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				880EA1A51EE41B630009155D /* Marker.h */,
+				880EA1A61EE41B630009155D /* Marker.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		880EA1A81EE43DEE0009155D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				88B47D491EE355A5005114C1 /* ViewController.h */,
+				88B47D4A1EE355A5005114C1 /* ViewController.m */,
+				880EA1A91EE43E160009155D /* SearchTableViewController.h */,
+				880EA1AA1EE43E160009155D /* SearchTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		88B47D371EE355A4005114C1 = {
 			isa = PBXGroup;
 			children = (
 				88B47D421EE355A5005114C1 /* Mappy */,
 				88B47D411EE355A5005114C1 /* Products */,
+				880EA1A11EE410290009155D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +96,10 @@
 		88B47D421EE355A5005114C1 /* Mappy */ = {
 			isa = PBXGroup;
 			children = (
+				880EA1A81EE43DEE0009155D /* Controllers */,
+				880EA1A41EE41A700009155D /* Model */,
 				88B47D461EE355A5005114C1 /* AppDelegate.h */,
 				88B47D471EE355A5005114C1 /* AppDelegate.m */,
-				88B47D491EE355A5005114C1 /* ViewController.h */,
-				88B47D4A1EE355A5005114C1 /* ViewController.m */,
 				88B47D4C1EE355A5005114C1 /* Main.storyboard */,
 				88B47D4F1EE355A5005114C1 /* Assets.xcassets */,
 				88B47D511EE355A5005114C1 /* LaunchScreen.storyboard */,
@@ -152,7 +190,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B47D4B1EE355A5005114C1 /* ViewController.m in Sources */,
+				880EA1A71EE41B630009155D /* Marker.m in Sources */,
 				88B47D481EE355A5005114C1 /* AppDelegate.m in Sources */,
+				880EA1AB1EE43E160009155D /* SearchTableViewController.m in Sources */,
 				88B47D451EE355A5005114C1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +352,7 @@
 				88B47D591EE355A5005114C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
