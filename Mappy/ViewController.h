@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchTableViewController.h"
 
 @class MKMapView;
 @class Marker;
 
-@interface ViewController : UIViewController 
+@interface ViewController : UIViewController <SearchDelegate>
 
 @property (strong, nonatomic) NSArray* markers;
+@property (strong, nonatomic) Marker* destinationMarker;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 

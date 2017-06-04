@@ -9,9 +9,20 @@
 #import <UIKit/UIKit.h>
 
 @class Marker;
+@protocol SearchDelegate;
 
 @interface SearchTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray* markers;
+
+@property (strong, nonatomic) id<SearchDelegate> delegate;
+
+@end
+
+@protocol SearchDelegate <NSObject>
+
+@property (strong, nonatomic) Marker* destinationMarker;
+
+- (void) setDestination:(Marker*) destinationMarker;
 
 @end

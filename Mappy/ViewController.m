@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
 #import "Marker.h"
-#import "SearchTableViewController.h"
 
 @interface ViewController ()
 
@@ -47,6 +46,12 @@
 
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -64,6 +69,7 @@
         
         SearchTableViewController* searchController = [segue destinationViewController];
         [searchController setMarkers:self.markers];
+        [searchController setDelegate:self];
         
     }
     
@@ -104,7 +110,13 @@
     
 }
 
+#pragma mark - SearchDelegate
 
+- (void) setDestination:(Marker*) destinationMarker {
+    
+    self.destinationMarker = destinationMarker;
+    
+}
 
 
 
